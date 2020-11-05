@@ -1,0 +1,60 @@
+/*________________________________________________________________*/
+/* BEGIN FILE */
+/*----------------------------------------------------------------
+%W%  %G%
+/usr/local/src/cable/anatomy/ca3cell.txt  translated Tue Jun 30  
+13:42:37 1992 by ntscable 2.0
+source file syntax: Eutectic
+output file syntax: CABLE
+soma: diameter = 23.4229 um  length = 46.1079 um  area = 3392.86 um2
+      28 three-D points; 30 outline points numbered 1425-1454
+      outline diameter = 30.1063 um
+10 primary neurites
+110 branches totaling 17491.9 um in length, 21723.9 um2 in area
+1424 tree points translated to 211 segments (1 requested)
+Neurites divided into segments of equal dx between adjacent digitized
+branch points.
+Segment length constrained to be < 17491.9 um.
+The file on this disk is an ASCII dump of a Eutectic datafile of a
+rat CA3 cell. The neuron is pictured in Figure 1 of Ishizuka, Weber
+and Amaral, J. Comp. Neurol. 1990.
+
+No. points   1454
+No. trees      11
+Text  File sent from PDP-11                                                                                                   
+
+ 
+
+----------------------------------------------------------------*/
+begintemplate ca3Cell
+
+					/* create sections */
+create    soma[1.],\
+		axon[1],\
+		dendrite[52.],\
+		apical_dendrite[81.]
+
+public    soma,\
+          axon,\
+          dendrite,\
+          apical_dendrite
+
+
+/*----------------------------------------------------------------*/
+proc geometry() {
+xopen("geo-cell1zr.hoc")
+}
+
+proc init() {
+	geometry()
+	}
+
+
+endtemplate ca3Cell
+
+/*________________________________________________________________*/
+/* END OF FILE */
+
+
+
+
