@@ -1,0 +1,1 @@
+# reducedCA3network
